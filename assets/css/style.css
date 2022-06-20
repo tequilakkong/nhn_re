@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+body { font-family:'Noto Sans KR', Arial, Helvetica, sans-serif; }
+.blind { display:none; }
+
+
+header { position:fixed; left:0; top:0; right:0; background:#000; color:#fff; z-index:10; }
+#header_in { min-width:1080px; margin:auto; padding:0 190px; height:80px; }
+
+header h1 { float:left; font-size:3em; line-height:80px; margin-top:22px; }
+header h1 a { display:block; width:120px; height:30px; background:url('../img/logo_white.png'); background-size:100%; }
+
+#nav { float:right; margin-top:30px}
+#nav li { display:inline-block; margin-left:50px; }
+#nav a { font-size:14px; font-family:'Montserrat', sans-serif; font-weight:600; }
+#nav a:hover { color: #FA2828; }
+#nav li.inside { margin-right:20px; }
+#nav li.inside:after { display:inline-block; content:""; width:1px; height:8px; background:#fff; margin:1px 0 0 40px}
+#nav li.global { margin-left:20px;}
+#nav li.global.on a{ color: #FA2828; }
+
+
+#view {}
+section { position:relative; height:100vh; background-size:cover; background-position:center center;  }
+
+#section1 { background-image:url('../img/bg_m1.jpg'); }
+#section2 { background-image:url('../img/bg_m2.jpg'); }
+#section3 { background-image:url('../img/bg_m3.jpg'); }
+#section4 { background-image:url('../img/bg_m4.jpg'); }
+#section5 { background-image:url('../img/bg_m5.jpg'); }
+#section6 { background-image:url('../img/bg_m6.jpg'); }
+
+#section6 .company_info { position:absolute; bottom:0; left:0; right:0; color:#fff; }
+.company_info ul { display:table; width:100%; height:130px;  }
+.company_info ul li { display:table-cell; width:50%; vertical-align:middle; }
+.company_info h4 { display:inline-block; font-size:18px; font-family:'Montserrat', sans-serif; font-weight:600; margin-right:20px;}
+.company_info p { display:inline-block; font-size:14px; font-weight:300; }
+
+.stock { background: rgba(250, 40, 40, 0.9); }
+.stock .stock_in { float:right; width:100%; min-width:540px; padding:0 30px 0 190px ;  }
+.stock h4 { vertical-align:middle; }
+.stock p { font-family:'Montserrat', sans-serif;  } 
+.stock p span { margin-left:5px; } 
+.stock p span.price { font-size:24px; font-weight:500; margin-left:0px;  margin-right:10px; vertical-align:middle; } 
+
+.press { background:rgba(0,0,0,0.9) }
+.press .press_in { float:left; width:100%; min-width:540px;padding:0 190px 0 30px; }
+
+
+
+
+
+
+
+
+.txtBox { position:absolute; top:50%; left:16%; transform:translateY(-50%);  color:#fff;   }
+.txtBox h3 { font-size:45px; font-family:'Montserrat', sans-serif; font-weight:700; margin-bottom:30px;}
+.txtBox p { font-size:20px; line-height:27px; font-weight:300; }
+.txtBox .btnDown { display:block; width:36px; height:21px; background:url('../img/sp_common_v3.png') no-repeat 0 -92px; margin-top:40px; }
+
+footer { position:relative; padding-bottom:50px }
+footer .footer_inner { min-width:1080px; margin:auto; padding:0 190px; }
+footer::before { position:absolute; content:""; top:55px; width:100%; height:1px; background:#ccc;}
+
+.footer_notice { padding:18px 0 60px 0; }
+.footer_notice p { font-size:14px; color:#494949; }
+.footer_notice p strong{ font-size:18px; font-family:'Montserrat', sans-serif; font-weight:700; margin-right:20px;}
+
+.legal_lst { float:left; }
+.legal_lst li { display:inline-block; margin-right:37px;}
+.legal_lst a { font-size:14px; color:#5e5e5e; }
+.legal_lst a.strong { color:#494949; font-weight:700; }
+
+.sub_co_lst { float:right; }
+.sub_co_lst > li { position:relative; display:inline-block; margin-left:59px;}
+.sub_co_lst > li > a { color:#999; font-size:14px; font-family:'Montserrat', sans-serif; }
+.sub_co_lst > li > a:after { display:inline-block; content:""; width:16px; height:16px; background:url(../img/sp_ent_2x.png) no-repeat -33px 0 / 400px auto; margin:2px 0 0 10px; vertical-align:top; }
+
+.sub_co_lst > li.active > a { color:#494949; }
+.sub_co_lst > li.active > a:after { background-position:-227px -27px;}
+.sub_co_lst > li.active .drop_box_wrap { display:block; }
+
+.drop_box_wrap { display:none; position:absolute; bottom:0; left:0; padding-bottom:30px; }
+.drop_box { width:170px; padding:15px; background:#fff; border:1px solid #999 }
+.drop_box ul { height:170px; overflow-y:auto; }
+.drop_box li {}
+.drop_box a { color:#999; font-size:12px; font-family:'Montserrat', sans-serif; line-height:25px; }
+.drop_box a:hover { color:#FA2828; }
+
+
+
+.copyright { clear:both; padding-top:30px; color:#999; font-size:14px; font-family:'Montserrat', sans-serif;}
+
+
+#remote { position:fixed; top:50%; left:50px; transform:translateY(-50%);}
+#remote a { display:block; width:12px; height:12px; border:3px solid #fff; margin:10px 0; }
+#remote a.on { border:3px solid #FA2828; }
+
+.s_num { position:fixed; top:100px; left:50px; border:3px solid yellow; font-size:50px; color:yellow}
+
+
+/*  반응형 추가 - 미디어쿼리 */
+@media screen and (max-width:1440px) {
+    #header_in { padding:0 20px; }
+    .company_info h4 { display:block; margin-bottom:10px; }
+    .stock .stock_in { padding:0 30px 0 50px; }
+    .press .press_in { padding:0 50px 0 30px; }
+}
+
+
+
+
